@@ -1,7 +1,7 @@
 const User = require("../models/User");
 
 // Validation helpers
-const isValidName = (name) => /^[A-Za-z]+$/.test(name); // only letters
+const isValidName = (name) => /^[A-Za-z ]+$/.test(name); // only letters
 const isValidDOB = (dob) => !isNaN(new Date(dob).getTime()); // valid date
 const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 const isValidPassword = (pwd) => pwd.length >= 6;
